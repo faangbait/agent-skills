@@ -1,0 +1,32 @@
+{
+    "containerEnv": {},
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "Anthropic.claude-code",
+                "openai.chatgpt",
+                "esbenp.prettier-vscode",
+                "eamodio.gitlens",
+                "ms-vscode.makefile-tools"
+            ]
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {},
+        "ghcr.io/larsnieuwenhuizen/features/jqyq:0": {},
+        "ghcr.io/helpers4/devcontainer/claude-dev:1": {},
+        "ghcr.io/jsburckhardt/devcontainer-features/codex:1": {},
+        "ghcr.io/wcgomes/devcontainer-features/agents-workspace:0": {},
+        "ghcr.io/jsburckhardt/devcontainer-features/fx:1": {}
+    },
+    "image": "mcr.microsoft.com/devcontainers/base:resolute",
+    "mounts": [
+        "source=claude-code-config,target=/opt/claude-code-config,type=volume",
+        "source=claude-scope-project-${localWorkspaceFolderBasename},target=${containerWorkspaceFolder}/.claude,type=volume",
+        "source=codex-config,target=/opt/.codex,type=volume"
+    ],
+    "name": "agent-skills",
+    "postCreateCommand": "sudo chown $USER:$USER ${containerWorkspaceFolder}/.claude &&\nsudo chown $USER:$USER /opt/claude-code-config && mkdir -p /opt/claude-code-config/.claude && touch /opt/claude-code-config/.claude.json &&\nln -s /opt/claude-code-config/.claude.json $HOME/.claude.json && ln -s /opt/claude-code-config/.claude $HOME/.claude &&\nsudo chown $USER:$USER /opt/.codex && ln -s /opt/.codex $HOME/.codex &&\nbash .devcontainer/install.sh",
+    "postStartCommand": "sudo chown -R vscode:vscode /home/vscode/.claude*",
+    "updateRemoteUserUID": true
+}
