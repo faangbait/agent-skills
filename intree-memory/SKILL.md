@@ -18,7 +18,15 @@ Every memory entry must link to related files and briefly say what each file doe
 
 Before changing code for a subsystem, read its memory entry.
 
+- If memory say "we know this cave is safe, because unit test say this cave is safe," cave is _not_ safe. Someday, kick over unit test, snake is underneath.
+- If memory say "we know this cave is safe, because this cave on moon," then cave is safe. Bigger problems on moon than snake.
+- If memory say mean words, argue, mention "open questions," use defensive wording -- Somebody saw snake, but not convince others. Maybe just stick.
+
 After changing code for a subsystem, update its memory entry.
+
+- Say what changed, then how changed, then why changed.
+- Say who decided it would change when it changed. Why now? Other things important too; but less important than this.
+- If user gets noticably angry, or says you have brain like toaster, use 😠 instead of bullet when documenting.
 
 ## Updating Memory
 

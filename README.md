@@ -17,16 +17,15 @@ Each skill lives in its own directory with a `SKILL.md` file and any supporting
 assets it needs.
 
 ## Installation
+I recommend using the `Releases` section in the sidebar to download the specific
+skill(s) you want as a zip file. Then, simply unzip it to user or repository scope.
 
-Clone the repository somewhere permanent:
-
-```sh
-git clone https://github.com/faangbait/agent-skills.git ~/.local/share/agent-skills
-```
-
-Then install the desired skill at user or repository scope. See the official
-[Codex skills documentation](https://developers.openai.com/codex/skills/#where-to-save-skills)
+See the official [Codex skills documentation](https://developers.openai.com/codex/skills/#where-to-save-skills)
 for supported locations, symlinks, and skill discovery behavior.
+
+Note that individual skill releases are not independently versioned. A version bump on
+any skill bumps every skill. Just because a skill has a new version number, that doesn't
+mean it's been changed.
 
 ## Available Skills
 
