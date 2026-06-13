@@ -1,6 +1,8 @@
 ---
 name: intree-memory
-description: One source of truth for project facts, decisions, and known limits. Keeps team using same current info. Avoids stale notes, duplicate facts, and conflicting docs.
+description: One source of truth for project facts, decisions, and known limits. Keeps team using same current info. Avoids stale notes, duplicate facts, and conflicting docs. Use when the user asks you to write documentation or project memory.
+user-invocable: true
+effort: medium
 ---
 
 # In-tree Memory Index
