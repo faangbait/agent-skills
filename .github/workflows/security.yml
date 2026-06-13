@@ -22,7 +22,7 @@ jobs:
           persist-credentials: false
 
       - id: scan
-        uses: platform-sec/opengrep-action@LATEST_SHA256_HASH
+        uses: platform-sec/opengrep-action@main
         with:
           target: .
           output-format: text
@@ -31,4 +31,4 @@ jobs:
   # software composition analysis provided by Google-OSV
   sca:
     if: github.event_name == 'schedule'
-    uses: google/osv-scanner-action/.github/workflows/osv-scanner-reusable.yml@LATEST_SHA256_HASH
+    uses: google/osv-scanner-action/.github/workflows/osv-scanner-reusable.yml@main
