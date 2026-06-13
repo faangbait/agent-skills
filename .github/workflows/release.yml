@@ -18,7 +18,7 @@ jobs:
           persist-credentials: false
 
       - name: Package skills
-        run: .github/scripts/package-skills.sh "$GITHUB_SHA"
+        run: .github/sh/package-skills.sh "$GITHUB_SHA"
 
       - name: Create GitHub release
         env:
