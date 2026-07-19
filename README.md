@@ -47,3 +47,12 @@ the included [`assets/template.md`](intree-memory/assets/template.md) and adapt
 its sections to the subsystem being documented.
 
 See [`intree-memory/SKILL.md`](intree-memory/SKILL.md) for the complete rules.
+
+### `write-like-sage`
+
+Draft, rewrite, edit, or critique text in Sage's established voice. 
+
+Agents using this skill:
+
+1. Review the conclusions of a corpus analysis report.
+2. Integrate these patterns into their output.
