@@ -48,6 +48,25 @@ its sections to the subsystem being documented.
 
 See [`intree-memory/SKILL.md`](intree-memory/SKILL.md) for the complete rules.
 
+### `oci-env`
+
+Explains the constraints and escape hatches of the ephemeral `oci-env` rootless
+RHEL container. Use it when `printenv oci-env` succeeds, browser automation or
+`PATH` behaves unexpectedly, a URI must open outside the container, or a
+missing utility needs a disposable installation.
+
+See [`oci-env/SKILL.md`](oci-env/SKILL.md) for the environment details and
+alternatives.
+
+### `ssml`
+
+Prepares text for natural-sounding text-to-speech output using Speech Synthesis
+Markup Language (SSML). It covers XML escaping, pronunciation aliases, pauses,
+emphasis, prosody, and Speechify emotion controls, with practical examples and
+recommended text-to-alias mappings.
+
+See [`ssml/SKILL.md`](ssml/SKILL.md) for the complete reference.
+
 ### `write-like-sage`
 
 Draft, rewrite, edit, or critique text in Sage's established voice. 

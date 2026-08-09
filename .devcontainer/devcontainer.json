@@ -1,61 +1,17 @@
 {
+    "name": "meta.middleware",
+    "image": "faangbait/workspaces:agents",
     "containerEnv": {},
     "customizations": {
         "vscode": {
             "extensions": [
-                "EditorConfig.EditorConfig",
-                "redhat.vscode-yaml",
-                "timonwong.shellcheck",
-                "usernamehw.errorlens",
-                "github.vscode-github-actions",
-                "KevinRose.vsc-python-indent",
-                "mikestead.dotenv",
-                "ankurmathur.opencode-provider-bridge"
-            ],
-            "mcp": {
-                "servers": {
-                    "context-mode": {
-                        "command": "context-mode"
-                    },
-                    "smart-tree": {
-                        "args": [
-                            "--mcp"
-                        ],
-                        "command": "st",
-                        "type": "stdio"
-                    }
-                }
-            },
-            "settings": {
-                "python.analysis.autoFormatStrings": true,
-                "python.defaultInterpreterPath": "/usr/local/python/current/bin/python",
-                "python.testing.pytestEnabled": false,
-                "python.testing.unittestArgs": [
-                    "-v",
-                    "-s",
-                    ".",
-                    "-p",
-                    "*_test.py"
-                ],
-                "python.testing.unittestEnabled": true
-            }
+                "ms-vscode.makefile-tools",
+                "formulahendry.docker-explorer",
+                "ms-azuretools.vscode-docker"
+            ]
         }
     },
     "features": {
-        "ghcr.io/devcontainers/features/python:1": {
-            "installTools": true,
-            "version": "3.14"
-        },
-        "ghcr.io/larsnieuwenhuizen/features/jqyq:0": {}
-    },
-    "image": "mcr.microsoft.com/devcontainers/python:3.14",
-    "mounts": [
-        "source=claude-code-config,target=/opt/claude-code-config,type=volume",
-        "source=claude-scope-project-${localWorkspaceFolderBasename},target=${containerWorkspaceFolder}/.claude,type=volume",
-        "source=opencode-config,target=/opt/opencode-config,type=volume",
-        "source=codex-config,target=/opt/.codex,type=volume",
-        "source=agents-config,target=/opt/.agents,type=volume"
-    ],
-    "name": "agent-skills",
-    "postCreateCommand": "sudo chown $USER:$USER ${containerWorkspaceFolder}/.claude && sudo chown $USER:$USER /opt/claude-code-config && mkdir -p /opt/claude-code-config/.claude && touch /opt/claude-code-config/.claude.json && ln -sfn /opt/claude-code-config/.claude.json $HOME/.claude.json && ln -sfn /opt/claude-code-config/.claude $HOME/.claude && echo \"export CLAUDE_CODE_DISABLE_CRON=1\" >> ~/.bashrc && sudo chown $USER:$USER /opt/opencode-config && mkdir -p $HOME/.config && ln -sfn /opt/opencode-config $HOME/.config/opencode && sudo chown $USER:$USER /opt/.codex && ln -sfn /opt/.codex $HOME/.codex && sudo chown $USER:$USER /opt/.agents && ln -sfn /opt/.agents $HOME/.agents && bash \"${containerWorkspaceFolder}/.devcontainer/install.sh\""
+        "ghcr.io/faangbait/dnf-features/secure-containers:1": {}
+    }
 }

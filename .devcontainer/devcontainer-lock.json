@@ -1,14 +1,9 @@
 {
   "features": {
-    "ghcr.io/devcontainers/features/python:1": {
-      "version": "1.8.0",
-      "resolved": "ghcr.io/devcontainers/features/python@sha256:fbcad6955caeecc5ad3f7886baf652e25cba5225a6c4c2287c536de2e5607511",
-      "integrity": "sha256:fbcad6955caeecc5ad3f7886baf652e25cba5225a6c4c2287c536de2e5607511"
-    },
-    "ghcr.io/larsnieuwenhuizen/features/jqyq:0": {
-      "version": "0.0.1",
-      "resolved": "ghcr.io/larsnieuwenhuizen/features/jqyq@sha256:4727add2a1e85173363d839d51f110a7df704c0996beebe90b1b78b429f69273",
-      "integrity": "sha256:4727add2a1e85173363d839d51f110a7df704c0996beebe90b1b78b429f69273"
+    "ghcr.io/faangbait/dnf-features/secure-containers:1": {
+      "version": "1.0.1",
+      "resolved": "ghcr.io/faangbait/dnf-features/secure-containers@sha256:5d94fd05bccfb3845c9041967d9091b346bf29c86023cf9f3e78c0106b47e1cc",
+      "integrity": "sha256:5d94fd05bccfb3845c9041967d9091b346bf29c86023cf9f3e78c0106b47e1cc"
     }
   }
 }
