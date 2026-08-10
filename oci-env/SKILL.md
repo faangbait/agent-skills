@@ -1,6 +1,6 @@
 ---
 name: oci-env
-description: "Helps when `printenv oci-env` exits 0, browser automation fails, or $PATH isn't what you expected."
+description "Use before running shell commands or editing `.devcontainer/**` in a VS Code/container workspace. First check `printenv oci-env`; when it succeeds, apply this environment’s runtime guidance. Also use when browser automation fails or PATH/tool availability is unexpected."
 ---
 
 **CONTRACT: If `printenv oci-env` exits `0`, THIS SKILL CAN HELP YOU.**
