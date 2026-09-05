@@ -40,9 +40,11 @@ one picks between two channels: pausing in-session to ask, or sending a
 durable page via a bundled `scripts/send_escalation.sh` so a human finds out
 even if nobody is watching the session.
 
-Requires `curl` and network egress to a paging webhook
-(`ESCALATION_WEBHOOK_URL`); if neither is available, the skill's async
-channel doesn't apply and it falls back to asking in-session only. The exact
+Pages a default escalation endpoint via `curl` — callers practically never
+know a URL to configure, so one is built in rather than required — and it
+may be overridden with `ESCALATION_WEBHOOK_URL`. If `curl` is missing or the
+endpoint is unreachable (an air-gapped environment, say), the page attempt
+just fails cleanly and it falls back to asking in-session only. The exact
 payload contract is defined by [`references/receiver.py`](human-in-the-loop-runbook/references/receiver.py)
 rather than restated in prose, so it can't go stale.
 
