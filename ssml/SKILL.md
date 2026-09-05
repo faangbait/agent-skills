@@ -18,6 +18,7 @@ SSML is XML markup for controlling synthesized speech. Wrap all content in a `<s
 - Use `<sub>` for pronunciation, for example `<sub alias="too doo dot m d">TODO.md</sub>`.
 - Match emotion to the text. Short sentences and punctuation strengthen delivery: `!` for intensity, `?` for uncertainty, and `...` for hesitation or sadness.
 - Combine emotion, prosody, emphasis, and breaks sparingly for finer control.
+- Since this is spoken text, you must avoid fancy punctation (like em-dashes) in favor of commas, periods, or parentheticals.
 
 ## Escaping characters
 
