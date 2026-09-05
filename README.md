@@ -29,6 +29,26 @@ mean it's been changed.
 
 ## Available Skills
 
+### `human-in-the-loop-runbook`
+
+An escalation policy, not general HITL philosophy — it answers one narrow
+question: when an agent hits a wall, what does it actually do next. Covers
+five halt conditions (unrecoverable error, blocked on ambiguous judgment,
+a destructive/irreversible action pending sign-off, resource/budget
+exhausted, and a run-until-green goal stuck in a doom loop), and for each
+one picks between two channels: pausing in-session to ask, or sending a
+durable page via a bundled `scripts/send_escalation.sh` so a human finds out
+even if nobody is watching the session.
+
+Requires `curl` and network egress to a paging webhook
+(`ESCALATION_WEBHOOK_URL`); if neither is available, the skill's async
+channel doesn't apply and it falls back to asking in-session only. The exact
+payload contract is defined by [`references/receiver.py`](human-in-the-loop-runbook/references/receiver.py)
+rather than restated in prose, so it can't go stale.
+
+See [`human-in-the-loop-runbook/SKILL.md`](human-in-the-loop-runbook/SKILL.md)
+for the full decision tree.
+
 ### `intree-memory`
 
 Keeps project facts, implementation decisions, validation findings, and known
